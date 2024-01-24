@@ -14,24 +14,26 @@ namespace BookStore.Controllers
         {
 			bookRepository = new BookRepository();
 		}
-        public List<BookModel> GetAllBooks()
+        public ViewResult GetAllBooks()
 		{
 			//return "All books";
-			return bookRepository.GetAllBooks();
+			var data =  bookRepository.GetAllBooks();
+			return View();
 		}
 
-		public BookModel GetBook(int id)
+		public ViewResult GetBook(int id)
 		{
 			//return $"book with id = {id}";
-			return bookRepository.GetBookById(id);
+			var data =  bookRepository.GetBookById(id);
+			return View();
 		}
 
 
 		//http://localhost:43862/book/searchbooks?bookName=MVCBooks&authorName=Nagarro
-		public List<BookModel> SearchBooks(string bookName, string authorName)
+		public ViewResult SearchBooks(string bookName, string authorName)
 		{
-			//return $"Book with name = {bookName} & Author = {authorName}";
-			return bookRepository.SearchBook(bookName, authorName);
-		}
+            var data = bookRepository.SearchBook(bookName, authorName);
+            return View();
+         }
 	}
 }
