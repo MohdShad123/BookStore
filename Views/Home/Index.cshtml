@@ -1,4 +1,4 @@
-﻿
+
 @{
     Layout = null;
 }
@@ -12,6 +12,26 @@
     </head>
     <body>
         <h1>Welcome to Book Store Application</h1>
-        <p>This is the home page of book store application</p>
-    </body>
+        <h1>@DateTime.Now.ToString("dd-M-yy")</h1>
+
+        <h1>Sum = @(3 + 5)</h1>
+
+        <hr />
+        <h1>Multiline - </h1>
+        
+
+         @{
+            int a = 10;
+            int b = 20;
+            int c = a + b;
+           }
+            <h1>@c</h1>
+
+            <h2>My email - mohd@gmail.com</h2>
+            <h2>Twiter - @@United</h2>
+
+            <p>This is the home page of book store application</p>
+
+
+</body>
 </html>
