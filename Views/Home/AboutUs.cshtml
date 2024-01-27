@@ -1,16 +1,16 @@
 ﻿
 @{
-    Layout = null;
+    Layout = "_Layout";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>AboutUs</title>
-</head>
-<body>
+@section breadcrumb {
+    <nav>
+        <ol>
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">About</a></li>
+            <li class="breadcrumb-item"><a href="#">About Us</a></li>
+        </ol>
+    </nav>
+}
     <h1>This is the AboutUs page of Book Store Application</h1>
-</body>
-</html>
+
