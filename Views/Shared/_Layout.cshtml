@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -46,6 +46,7 @@
             </div>
         </nav>
     </header>
+    @RenderSection("breadcrumb",required:false);
     <main role="main">
         @RenderBody()
     </main>
@@ -57,5 +58,8 @@
             @*<cutom-email my-email="nitish@webgentle.com"></cutom-email>*@
         </div>
     </footer>
+    <script src="~/lib/jquery/jquery.js"></script>
+
+    @RenderSection("scripts",required:false);
 </body>
 </html>
