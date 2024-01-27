@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Book Store Application</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <script src="~/js/site.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img src="https://images.pexels.com/photos/906150/pexels-photo-906150.jpeg?auto=compress&cs=tinysrgb&w=600 width="30" height="30" asp-append-version="true" />
+                    Book Store
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="btn btn-outline-primary">Login</a>
+                            <a class="btn btn-primary">Register</a>
+                        </li> 
+                    </ul>
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/home/aboutus">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/home/contactus" >Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/book/getallbooks">All Books</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main role="main">
+        @RenderBody()
+    </main>
+    <footer class="border-top footer text-muted text-center">
+        <div class="container">
+            Copyright  &copy; Book Store @DateTime.Now.Year
+            @*<a href="mailto:nitish.webgentle@gmail.com">nitish.webgentle@gmail.com</a>
+            *@
+            @*<cutom-email my-email="nitish@webgentle.com"></cutom-email>*@
+        </div>
+    </footer>
+</body>
+</html>
