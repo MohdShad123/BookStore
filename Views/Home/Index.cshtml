@@ -1,29 +1,42 @@
-
 @{
-    Layout = null;
+    dynamic data = ViewBag.Data;
 }
 
-<!DOCTYPE html>
+@section breadcrumb {
+    <nav area-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">About</a></li>
+            <li class="breadcrumb-item"><a href="#">Index</a></li>
+        </ol>
+    </nav>
+}
 
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width" />
-	<title>Index</title>
-	<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
-	<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
-	<link href="~/css/site.css" rel="stylesheet" />
-	<script src="~/js/site.js"></script>
-    </head>
- <body class="container">
-    <img src="~/images/logo.jpg" class="logo" alt="logo" />
-    <h1 class="h1">Welcome to Book Store Application</h1>
-    <p>This is the home page of our book store application</p>
-</body>
-<script src="~/lib/jquery/jquery.js"></script>
-</html>
+    <!--<img class="mt-5" id="logo" src="https://images.pexels.com/photos/906150/pexels-photo-906150.jpeg?auto=compress&cs=tinysrgb&w=600  /">
+    <h1 class="h1">Welcome to Home Page</h1>-->
+<section class="jumbotron text-center mt-5">
+    <div class="container">
+        <h1>Welcome to Bookstore @ViewBag.Title</h1>
+        <p class="lead text-muted">
+            @data.Id @data.Name <br />
+            Id = @ViewBag.Type.Id <br />
+            Name = @ViewBag.Type.Author
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <p>
+            <a href="#" class="btn btn-primary my-2">Search books</a>
+        </p>
+    </div>
+</section>
 
-<script>
-    $(document).ready(function(){
-        alert("Page loaded");
-    });
-</script>
+
+    
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            alert("document is ready");
+        })
+    </script>
+}
+
