@@ -6,11 +6,21 @@ namespace BookStore.Controllers
 {
     public class HomeController : Controller
     {
+        [ViewData]
+        public string? CustomProperty { get; set; }
+
+        [ViewData]
+        public string? Title { get; set; }
+
+        [ViewData]
+        public BookModel? Book { get; set; }
+
         public ViewResult Index()
         {
-            ViewData["property1"] = "Mohd Usmani";
+            Title = "Home page from Controller";
+            CustomProperty = "Custom value";
 
-            ViewData["book"] = new BookModel() { Author = "Nagarro", Id = 1 };
+            Book = new BookModel() { Id = 1, Title = "Asp.Net" };
             return View();
         }
 
