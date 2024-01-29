@@ -1,5 +1,9 @@
+@*@{
+    ViewData["Title"] = "Home";
+}*@
+
 @{
-    var bookInfo = ViewData["book"] as BookModel;
+    var book = ViewData["Book"] as BookModel;
 }
 
 @section breadcrumb {
@@ -16,10 +20,9 @@
     <h1 class="h1">Welcome to Home Page</h1>-->
 <section class="jumbotron text-center mt-5">
     <div class="container">
-        <h1>Welcome to Bookstore @ViewData["property1"]</h1>
-        <h1>Id -  @bookInfo.Id</h1>
-        <h1>Author - @bookInfo.Author</h1>
-        <h1></h1>
+        <h1>Welcome to Bookstore @ViewData["CustomProperty"]</h1>
+        <h1>Id - @book.Id</h1><br />
+        <h1>Title - @book.Title</h1>
         <p class="lead text-muted">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
